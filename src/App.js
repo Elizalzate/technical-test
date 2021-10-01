@@ -1,23 +1,31 @@
-import logo from './logo.svg';
 import './App.css';
+import { Tarea } from './Components/Tarea';
+import { ListHeader } from './Components/ListHeader';
 
+const tareas = [
+ { id:1, nombre: "Buy new sweatshirt", completado:true},
+ { id:2, nombre: "Read an article", completado:false},
+ { id:3, nombre: "Watch a movie", completado:false},
+];
+
+const agregarTarea = ()=>{
+
+  let id = tareas.length + 1;
+  let nombre = document.getElementById('nuevaTarea').value;
+  tareas.push({ id: id, nombre: nombre, completado: false});
+
+};
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ListHeader/>
+      {
+        tareas.map( 
+          tarea => <Tarea tarea={tarea}/>
+        )
+      }
+      <input id="nuevaTarea" type="text" placeholder="nueva tarea"/>
+      <button onClick={agregarTarea}></button>
     </div>
   );
 }
