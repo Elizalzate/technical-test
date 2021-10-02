@@ -4,9 +4,9 @@ export const Tarea = ({tarea})=>{
 
     const [completado, setCompletado] = useState(tarea.completado);
     let completada = 
-         completado ?
-        'O'
-        : 'X';
+         completado 
+         ? 'O'
+         : 'X';
 
    
     const toggleCompletado = ()=>{
