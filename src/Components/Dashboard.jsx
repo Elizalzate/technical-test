@@ -10,11 +10,12 @@ export const Dashboard = () => {
         { id:4, nombre: "Listen to a podcast", completado:false},
        ]);
 
+    const [nuevaTarea, setNuevaTarea] = useState();
+
     const agregarTarea = ()=>{
 
     let id = tareas.length + 1;
-    let nombre = document.getElementById('nuevaTarea').value;
-    tareas.push({ id: id, nombre: nombre, completado: false});
+    setTareas(tareas.push({ id: id, nombre: nombre, completado: false}));
     
     };
 
