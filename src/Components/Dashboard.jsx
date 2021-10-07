@@ -10,15 +10,6 @@ export const Dashboard = () => {
         { id:4, nombre: "Listen to a podcast", completado:false},
        ]);
 
-    const [nuevaTarea, setNuevaTarea] = useState('');
-
-    const agregarTarea = (e)=>{
-        e.preventDefault();
-
-    let id = tareas.length + 1;
-    setTareas(tareas.push({ id: id, nombre: nuevaTarea, completado: false}));
-    
-    };
 
     return(
         <>
@@ -28,8 +19,6 @@ export const Dashboard = () => {
                 tarea => <Tarea tarea={tarea}/>
                 )
             }
-            <input id="nuevaTarea" type="text" placeholder="nueva tarea" value={nuevaTarea}/>
-            <button onClick={agregarTarea}></button>
         </>
     );
 
