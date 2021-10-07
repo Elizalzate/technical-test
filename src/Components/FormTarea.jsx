@@ -7,8 +7,6 @@ export const FormTarea = () => {
     const agregarTarea = (e)=>{
         e.preventDefault();
 
-    let id = tareas.length + 1;
-    setTareas(tareas.push({ id: id, nombre: nuevaTarea, completado: false}));
     
     };
     return(
