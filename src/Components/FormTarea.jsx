@@ -11,8 +11,8 @@ export const FormTarea = () => {
     };
     return(
         <form action="">
-            <input id="nuevaTarea" type="text" placeholder="nueva tarea" value={nuevaTarea}/>
-            <button onClick={agregarTarea}></button>
+            <input id="nuevaTarea" type="text" placeholder="nueva tarea" value={nuevaTarea} className="form-control"/>
+            <button onClick={agregarTarea} className="btn btn-primary"></button>
         </form>
     );
 };
