@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Tarea } from './Tarea';
 import { ListHeader } from './ListHeader';
+import { FormTarea } from './FormTarea';
 
 export const Dashboard = () => {
     const [tareas, setTareas] = useState([
@@ -19,6 +20,7 @@ export const Dashboard = () => {
                 tarea => <Tarea tarea={tarea}/>
                 )
             }
+            <FormTarea />
         </>
     );
 
