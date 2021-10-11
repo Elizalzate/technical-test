@@ -15,9 +15,9 @@ export const Tarea = ({tarea})=>{
 
 
     return(
-        <div className="row">
+        <div className="">
             <label> {tarea.nombre}</label>
-            <button onClick={toggleCompletado} className={`btn btn-${completada?'success':'danger'}`}>{completada}</button>
+            <button onClick={toggleCompletado} className={`btn btn-${tarea.completado?'success':'danger'}`}>{completada}</button>
 
         </div>
     );

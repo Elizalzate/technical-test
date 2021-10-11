@@ -14,13 +14,15 @@ export const Dashboard = () => {
 
     return(
         <>
-            <ListHeader/>
-            {
-                tareas.map( 
-                tarea => <Tarea tarea={tarea}/>
-                )
-            }
-            <FormTarea />
+            <div className="container">
+                <ListHeader/>
+                {
+                    tareas.map( 
+                    tarea => <Tarea tarea={tarea}/>
+                    )
+                }
+                <FormTarea />
+            </div>
         </>
     );
 
