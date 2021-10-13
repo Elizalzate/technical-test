@@ -19,12 +19,12 @@ export const Tarea = ({tarea})=>{
             <label> {tarea.nombre}</label>
             <button 
                 className={
-                    `btn btn-${tarea.completado
+                    `btn btn-${completado
                         ?'success'
                         :'danger'
                     }`
                 } 
-                disabled={tarea.completado}
+                disabled={completado}
                 onClick={toggleCompletado}  
             >
                     {completada}
