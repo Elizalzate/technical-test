@@ -17,7 +17,18 @@ export const Tarea = ({tarea})=>{
     return(
         <div className="">
             <label> {tarea.nombre}</label>
-            <button onClick={toggleCompletado} className={`btn btn-${tarea.completado?'success':'danger'}`}>{completada}</button>
+            <button 
+                className={
+                    `btn btn-${tarea.completado
+                        ?'success'
+                        :'danger'
+                    }`
+                } 
+                disabled={tarea.completado}
+                onClick={toggleCompletado}  
+            >
+                    {completada}
+            </button>
 
         </div>
     );
