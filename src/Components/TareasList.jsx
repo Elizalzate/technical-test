@@ -15,7 +15,7 @@ export const TareasList = () => {
         <div id="listTareas">
             {
                 tareas.map( 
-                tarea => <Tarea tarea={tarea}/>
+                    tarea => <Tarea tarea={tarea}/>
                 )
             }
         </div>
